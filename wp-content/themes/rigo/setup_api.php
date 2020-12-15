@@ -18,3 +18,9 @@ $api->get([ 'path' => '/course/(?P<id>[\d]+)', 'controller' => 'SampleController
 $api->delete([ 'path' => '/course/(?P<id>[\d]+)', 'controller' => 'SampleController:deleteCourse' ]); 
 $api->post([ 'path' => '/course', 'controller' => 'SampleController:createCourse' ]); 
 $api->get([ 'path' => '/course', 'controller' => 'SampleController:getCoursesWithCustomFields' ]); 
+
+// $api->get([ 'path' => '/quote/(?P<useremail>[\s]+)', 'controller' => 'QuoteController:getSingleQuote' ]); 
+$api->post([ 'path' => '/quotes', 'controller' => 'QuoteController:getSingleQuote' ]); 
+$api->get([ 'path' => '/quote', 'controller' => 'QuoteController:getAllQuote' ]);
+$api->post([ 'path' => '/quote', 'controller' => 'QuoteController:createQuote' ]);
+$api->delete([ 'path' => '/quote/(?P<id>[\d]+)', 'controller' => 'QuoteController:deleteQuote' ]);
